@@ -166,7 +166,7 @@ SW1# show mac address-table count
 
 Al ejecutar el ataque me fijé en cómo la tabla CAM del switch se llenaba a gran velocidad con direcciones MAC aleatorias que yo mismo estaba generando con el script. Comprendí que el problema real no es solo llenar la tabla, sino lo que ocurre después: cuando se agota, el switch entra en modo fail-open y empieza a reenviar el tráfico unicast a todos los puertos como si fuera un hub, lo que permitiría capturar tráfico destinado a otros equipos.
 
-## Cuando configuré Port Security con un máximo de 3 MACs por puerto y la acción restrict, vi cómo el contador de violaciones de seguridad empezaba a subir mientras la tabla dejaba de crecer más allá del límite. Me di cuenta de que Port Security es una de las protecciones más básicas y a la vez más importantes en puertos de acceso, porque corta el ataque de raíz limitando cuántas direcciones MAC puede aprender el switch en cada puerto.
+Cuando configuré Port Security con un máximo de 3 MACs por puerto y la acción restrict, vi cómo el contador de violaciones de seguridad empezaba a subir mientras la tabla dejaba de crecer más allá del límite. Me di cuenta de que Port Security es una de las protecciones más básicas y a la vez más importantes en puertos de acceso, porque corta el ataque de raíz limitando cuántas direcciones MAC puede aprender el switch en cada puerto.
 
 ## 8. Referencias
 
